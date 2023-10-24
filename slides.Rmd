@@ -1,5 +1,5 @@
 ---
-title: "MODULE NAME"
+title: "Influencers"
 subtitle: "Digital and Social Media Strategies"
 author: "Lachlan Deer"
 institute: "Tilburg University"
@@ -13,21 +13,550 @@ output:
       highlightLines: true
       countIncrementalSlides: false
 ---
-class: font200
+class: font160
 
 # Learning Goals for this Week
 
-TBD
+* Identify traits of an influencer and their account that correlate with their popularity 
+
+* Explain how to quantify the effect of influencers on product demand 
+* Describe the relative effectivess of sponsored content on demand relative to organic content 
+* Outline how sponsorship disclosure by influencers impacts consumer perceptions of them and the brand they are advertising
+
+---
+class: font160
+# What is Influencer Marketing?
+
+> **Influencer Marketing**: A type of social media marketing that uses endorsements and product mentions from influencers
+
+Who are influencers? Someone who has:
+
+* Power to affect the purchasing decisions of others because of his or her authority, knowledge, position, or relationship with his or her audience
+* A following in a distinct niche, with whom he or she actively engages
+
+Types of influencers:
+
+* How niche they are 
+* How large there reach is: mega, macro, micro, nano 
+
+---
+class: font130
+# The Influencer Market 
+
+**Stylized Facts**:
+
+* Large and growing, approx 9.7 billion USD in 2020
+  * 2016: 1.7 billion USD, 2025: (expected) > 20 billion USD
+
+* Approx. 3/4 companies use influencer marketing to some extent, mainly Instagram
+  * Only 65% of those who use it, track ROI
+
+* Becoming 'centralized' thorugh influencer marketing agencies 
+  * Interesting incentive problems here...
+
+* Large growth in the use of "micro" influencers 
+
+* Growing concern: compliance issues
+  * Only approx 20% of (US/UK) posts meet regulatory guidelines
+
+<!--- 
+borrowed roughly from here https://influencermarketinghub.com/influencer-marketing-benchmark-report-2020/
+--->
+
+---
+class: font160
+# Today's Topic Coverage
+
+
+Understanding Characteristics of Popular Streamers on Live Streaming Platforms: Evidence from Twitch.tv 
+
+* [Zhao et al (2020 )](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3388949)
+
+Video Advertising by Twitch Influencers
+
+* [Huang & Morozov (2022)](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4065064)
+
+Sponsorship Disclosure of Influencers – A Curse or a Blessing?
+
+* [Giuffredi-Kaehr et al (2022)](https://doi.org/10.1177/109499682210756)
+
 
 ---
 class: inverse, center, middle
-
-# Section XX
+# Characteristics of Popular Streamers
 
 ---
-# Slide Title 
+class: font160
+# Motivation
 
-course content here
+**Strategic Question**: What are the key characteristics of popular streamers
+
+* Streamers as an insight into influencers more generally ...
+
+**Why relevant**:
+
+* *Influencer*: Can you "become" more popular?
+* *Firms*: What are characteristics of influencers that get high engagement?  
+
+**Observational Study + no "clever" empirical strategy**
+
+$\implies$ **Findings are descriptive**
+
+---
+class: font120
+# Research Hypotheses
+
+```{r, echo = FALSE, fig.align = "center", out.width="65%"}
+url <- "figs/influencer_charac_hypotheses.png"
+knitr::include_graphics(url)
+```
+
+**Affordance?** In this paper...
+
+* Profile Information & social interactivity
+
+... as **distinct from professionalism** ... 
+
+* Part of a professional team & gaming proficiency
+
+---
+class: font160
+# Data
+
+516 Twitch streamers over three weeks
+
+**Streamer Popularity** (static!): 
+
+* View count
+* Number of followers
+
+**Social Interactivity**: 
+
+* Webcam
+* Words in Transcript 
+* Links to Twitter Profile 
+
+**Personality Traits**:  
+
+* Linguistic Analyses of stream transcripts & tweets
+
+---
+# Measurement
+
+```{r, echo = FALSE, fig.align = "center", out.width="70%"}
+url <- "figs/influencer_charac_measurement.png"
+knitr::include_graphics(url)
+```
+
+---
+class: font150
+# Regression
+
+Regression equation:
+
+```{r, echo = FALSE, fig.align = "center", out.width="80%"}
+url <- "figs/influencer_charac_regression.png"
+knitr::include_graphics(url)
+```
+
+.center[.font70[Note the lack of subscripts! Don't be **that** person!]]
+
+Remarks:
+
+* PBA: Profile Building Affordance 
+* Same regression with no. of followers as alternative outcome
+
+---
+# Results
+
+```{r, echo = FALSE, fig.align = "center", out.width="70%"}
+url <- "figs/influencer_charac_results_main.png"
+knitr::include_graphics(url)
+```
+
+**Remark**: Mind the overly causal language in the results section of the paper
+
+---
+class: font160
+# Takeaways
+
+Having:
+
+* Profile Descriptors 
+* Camera On 
+* Talking to your viewers 
+* Being a Professional 
+
+**positively associated** with being more **popular** on Twitch 
+
+**Personality Trait** results are **mixed** ... 
+
+* Openness and conscientiousness negative associated with popularity 
+* Neuroticism positively associated
+
+(**my** worries on this bit: Omitted Variables, measurement errors)
+
+
+---
+class: inverse, center, middle
+# Video Advertising by Twitch Influencers
+
+---
+class: font160
+# Motivation
+
+**Strategic Question**: What is the effectiveness of influencer marketing on consumer demand 
+
+* Application: Twitch & Video Games 
+
+**Why relevant?**
+
+* (Over-) Excitement about influencer marketing 
+* Limited evidence beyond anecdotes 
+* It's **hard** to do, but **worth** trying
+
+No experiment but **clever empirical strategy** 
+
+$\implies$ think of most estimates as **casual**
+
+---
+# Twitch
+
+```{r, echo = FALSE, fig.align = "center", out.width="100%"}
+url <- "figs/video_ads_twitch.png"
+knitr::include_graphics(url)
+```
+
+---
+class: font140
+# The Key Idea of the Paper 
+
+.font120[*What they want to estimate*]: 
+
+**Viewership of streams** $\rightarrow$ **demand**
+
+* Question: Why won't linear regression suffice?
+
+.font120[*Ideal Experiment*]:
+
+**Activate streamers** at **random times** to generate **exogenous variation** in **viewers** 
+
+.font120[*Paper's "best" approximation*]:
+
+* Variation in timing of when top streamers broadcast
+* ... that should be independent of shocks to game popularity
+* Essentially exploiting that streamers work "irregular" hours
+
+
+---
+class: font140
+# Model Free Evidence
+
+```{r, echo = FALSE, fig.align = "center", out.width="100%"}
+url <- "figs/video_ads_modelfree.png"
+knitr::include_graphics(url)
+```
+
+Observations:
+
+* Players does not immediately peak 
+* Slowly returns to baseline
+
+$\implies$ potential for short-lived effects on game usage
+
+---
+class: font140
+# Empirical Strategy
+
+Regression Equation:
+
+```{r, echo = FALSE, fig.align = "center", out.width="80%"}
+url <- "figs/video_ads_regression.png"
+knitr::include_graphics(url)
+```
+
+where: 
+
+```{r, echo = FALSE, fig.align = "center", out.width="35%"}
+url <- "figs/video_ads_viewerstock.png"
+knitr::include_graphics(url)
+```
+
+i.e. is a weighted sum of recent viewers ...
+
+* where the eights decay geometrically, over time 
+* Set T = 72 hours (!!)
+
+$\delta$ $\rightarrow$ persistant effect of viewership 
+
+* "carryover" relative to "immediate" effects
+
+---
+class: font140
+# Empirical Strategy
+
+**How to they use streamer's timing of broadcast?** 
+
+* Technically: **instrumental variables**
+* To overcome omitted variable bias and simultaneity
+* See digram in class ... 
+
+What are the instruments?
+
+* **Number of top streamers broadcast game $j$ at time $t$**
+  * Measure this for **each of the last 12 hours**
+
+
+---
+class: font140
+# Main Results
+
+```{r, echo = FALSE, fig.align = "center", out.width="80%"}
+url <- "figs/video_ads_main_results.png"
+knitr::include_graphics(url)
+```
+
+Findings: 
+
+* **Small**, positive & statistically significant effects ($\beta$)
+  * Interpret? 
+* Effect **persists over time** ($\delta$)
+
+---
+class: font140
+# Heterogeneity Across Products
+
+```{r, echo = FALSE, fig.align = "center", out.width="80%"}
+url <- "figs/video_ads_heterog.png"
+knitr::include_graphics(url)
+```
+
+Largest Effects: 
+
+* Small publishers 
+* High variance in ratings 
+* Older games  
+
+---
+class: font140
+# Sponsored Versus Organic 
+
+
+```{r, echo = FALSE, fig.align = "center", out.width="80%"}
+url <- "figs/video_ads_sponsored.png"
+knitr::include_graphics(url)
+```
+
+$\omega < 1$ $\rightarrow$ sponsored content effectiveness is a fraction of organic 
+
+* 19.7% as effective as organic streams!
+
+---
+class: font140
+# Cascades 
+
+```{r, echo = FALSE, fig.align = "center", out.width="80%"}
+url <- "figs/video_ads_cascades.png"
+knitr::include_graphics(url)
+```
+
+Cascades: sponsored stream generates additional organic content
+
+---
+class: font140
+# Cascades 
+
+```{r, echo = FALSE, fig.align = "center", out.width="70%"}
+url <- "figs/video_ads_cascades_totaleffect.png"
+knitr::include_graphics(url)
+```
+
+* Sponsored streams generate 6.1 streamers to broadcase organically 
+  * $\theta_1 \gamma / (1 - \theta_2 \gamma)$
+* Additional organic streams generate 15,235 new viewers 
+  * ... which are more likely to convert to buyers
+
+---
+# Return on Investment
+
+```{r, echo = FALSE, fig.align = "center", out.width="60%"}
+url <- "figs/video_ads_roi.png"
+knitr::include_graphics(url)
+```
+
+ROI:
+
+* Median game has additional revenue of $9.5 due to sponsored streams
+* 18% of games have positive ROI if **not** account for cascades 
+* 34% of games have positive ROI if account for cascades 
+
+$\implies$ **sponsored influencer promotions are mostly ineffective**
+
+---
+class: font160
+# Takeaways 
+
+* **Small, positive effects** of organic influencer content **on demand** 
+  * Similar in magnitude to OWoM volume and advertising 
+  * ... which helps these numbers feel credible 
+* **Sponsoring influencers** leads even **smaller effects** (approx 1/5th!)
+  * But does lead to cascades of organic content 
+* **ROI** for sponsored content is **negative for 2/3rds of games**
+
+
+---
+class: inverse, center, middle
+# Sponsorship Disclosure of Influencers 
+
+---
+class: font160
+# Motivation 
+
+**Strategic Question**: How does sponsorship disclosure impact consumer evaluations of brands and influencers?
+
+* And does it differ across influencer type?
+
+**Why Relevant?**
+
+* Sponsored influencer posts used to be the "wild west" of advertising
+  * i.e. unregulated, left to consumers to discern 
+  * Unlike most advertising markets
+* Increase regulation mandated by governments ...
+* ... But actual uptake is still low
+
+---
+class: font140
+# Conceptual Framework
+
+```{r, echo = FALSE, fig.align = "center", out.width="80%"}
+url <- "figs/disclosure_conceptual.png"
+knitr::include_graphics(url)
+```
+
+We're off to the (online) lab to get at these answers 
+
+* Discussion Q: Why?
+
+---
+class: font140
+# Experiments: An Overview
+
+**Study 1a**: Influencer Type on persuasion knowledge? What are the impacts on brand eval and likeability?
+
+**Study 1b**: Replicates Study 1a with "more control"
+
+* Less info about influencer changing simultaneously
+* (Won't discuss this here)
+
+**Study 2**: What does disclosure vs non disclosure do? 
+
+**Study 3**: Replicates Study 2 with real influencers
+* (Won't discuss this here)
+
+---
+class: font150
+# Study 1a
+
+The Basics: 
+
+* **Fictitious** influencers 
+
+* Influencer **Types**: Nano, micro, macro, mega, nano
+
+* Industry: **Food, Instagram** 
+
+* Participants: 282 **Western Europeans** 
+
+---
+class: font130
+# Study 1a: Stimuli
+
+Varies **Profile info** across types of influencer 
+
+```{r, echo = FALSE, fig.align = "center", out.width="80%"}
+url <- "figs/disclosure_study_1_manip1.png"
+knitr::include_graphics(url)
+```
+
+Varies **likes** across types of influencer 
+
+
+```{r, echo = FALSE, fig.align = "center", out.width="70%"}
+url <- "figs/disclosure_study_1_manip2.png"
+knitr::include_graphics(url)
+```
+
+---
+# Study 1a: Results 
+
+```{r, echo = FALSE, fig.align = "center", out.width="55%"}
+url <- "figs/disclosure_study_1_results.png"
+knitr::include_graphics(url)
+```
+
+Takeaways: 
+
+* Mediation via persuasion knowledge for macro, mega, nano 
+* No Mediation via trustworthiness of the post 
+
+Persuasion Knowledge?
+
+* Consumers expected post to be sponsored
+
+$\implies$ when consumers think something is sponsored and can't be verified perceptions go down
+
+---
+# Study 2 
+
+2 x 2 design: 
+
+* nano vs mega 
+* non-disclosure vs disclosure 
+
+```{r, echo = FALSE, fig.align = "center", out.width="60%"}
+url <- "figs/disclosure_study_2_manip.png"
+knitr::include_graphics(url)
+```
+
+---
+class: font140
+# Study 2: Results 
+
+```{r, echo = FALSE, fig.align = "center", out.width="50%"}
+url <- "figs/disclosure_study_2_results_fig.png"
+knitr::include_graphics(url)
+```
+
+* When no disclosure, when respondant thinks post is sponsored their trust in post content falls
+  * Leads to lower evals of influencer and brand (not shown)
+* **NOT** the case when sponsorship is disclosed
+
+---
+class: font160
+# Takeaways 
+
+* Revealing a post is **sponsored** makes **consumers trust the post more**, particularly **when the content is perceived to be sponsored**
+
+* ... **Prevents decrease in likeability of influencers** and **negative brand evaluations** 
+
+
+---
+class: inverse, center, middle
+# Recap 
+
+---
+class: font160
+# Summary
+
+* Characteristics of an influencer and their content delivery are associated with their popular
+
+* Organic influencers have small, positive effect on demand
+
+* Sponsored content appears to have negative ROI (on twitch, in gaming)
+  * More work needed to generalize this
+
+* Disclosing post is sponsored prevents negative association from consumers to influencer and brands 
+  * What does it do to engagement and purchase intentions?
 
 ---
 # License & Citation
@@ -36,10 +565,10 @@ Suggested Citation:
 
 ```{r, engine='out', eval = FALSE}
 @misc{deerdsms2022,
-      title={"Digital and Social Media Strategies: Lecture Slide Template"},
+      title={"Digital and Social Media Strategies: Influencers"},
       author={Lachlan Deer},
       year={2022},
-      url = "https://github.com/tisem-digital-marketing/dsms-lecture-template"
+      url = "https://github.com/tisem-digital-marketing/dsms-lecture-13-influencers"
 }
 ```
 
