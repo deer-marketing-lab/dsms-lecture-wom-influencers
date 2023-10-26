@@ -23,40 +23,84 @@ class: font160
 * Describe the relative effectivess of sponsored content on demand relative to organic content 
 * Outline how sponsorship disclosure by influencers impacts consumer perceptions of them and the brand they are advertising
 
+UPDATE
+
+---
+class: inverse, center, middle
+
+# Preliminaries
+
+---
+class: font160
+# Where Are We Now? 
+
+Course Themes:
+
+1. Classical Approaches to Measuring Advertising Effects
+2. Modern Evaluation of Digital Advertising Effects
+2. **User Generated Content & Social Media**
+3. Email & Mobile Marketing
+4. Issues in (Massive) Online Marketplaces
+5. Impact of Privacy Regulations 
+
+
+---
+class: font160
+# Our learning journey... 
+
+.center[.font120[Understanding causal effects of Social Media on Marketing Outcomes]]
+
+<br>
+
+*Previously*: User Generated Content, Ratings and Reviews
+
+**Today**: **Influencers**
+
+*Next Week*: Word of Mouth and Viral Marketing
+
+<br>
+
+`r icons::fontawesome("rocket", style = "solid")` Challenge: Hard to run controlled field experiments on social media content
+
+---
+class: inverse, center, middle
+
+# Influencer Marketing
+
+
 ---
 class: font160
 # What is Influencer Marketing?
 
 > **Influencer Marketing**: A type of social media marketing that uses endorsements and product mentions from influencers
 
-Who are influencers? Someone who has:
+*Who are influencers?* Someone who has:
 
 * Power to affect the purchasing decisions of others because of his or her authority, knowledge, position, or relationship with his or her audience
 * A following in a distinct niche, with whom he or she actively engages
 
-Types of influencers:
+*Types of influencers*:
 
-* How niche they are 
+* How niche they are: products / target audience 
 * How large there reach is: mega, macro, micro, nano 
 
 ---
-class: font130
-# The Influencer Market 
+class: font150
+# The Influencer Market: Stylized Facts 
 
-**Stylized Facts**:
 
-* Large and growing, approx 9.7 billion USD in 2020
+* **Large and growing**, approx 9.7 billion USD in 2020
   * 2016: 1.7 billion USD, 2025: (expected) > 20 billion USD
 
-* Approx. 3/4 companies use influencer marketing to some extent, mainly Instagram
-  * Only 65% of those who use it, track ROI
+* **Approx. 3/4 companies use influencer marketing** to some extent, mainly Instagram
+  * **Only 65%** of those who use it, **track ROI**
 
-* Becoming 'centralized' thorugh influencer marketing agencies 
+* Becoming 'centralized' through influencer marketing agencies 
   * Interesting incentive problems here...
 
-* Large growth in the use of "micro" influencers 
+* Large **growth in the use of "micro" influencers** 
 
-* Growing concern: compliance issues
+* Growing concern: **compliance issues**
   * Only approx 20% of (US/UK) posts meet regulatory guidelines
 
 <!--- 
@@ -68,138 +112,47 @@ class: font160
 # Today's Topic Coverage
 
 
-Understanding Characteristics of Popular Streamers on Live Streaming Platforms: Evidence from Twitch.tv 
+Which type of influencer should a firm choose?
 
-* [Zhao et al (2020 )](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3388949)
+* [Tian, Dew & Iyengar (2023)]()
 
-Video Advertising by Twitch Influencers
+Do influencers impact product demand?
 
-* [Huang & Morozov (2022)](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4065064)
+* [Huang & Morozov (2023)](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4065064)
 
-Sponsorship Disclosure of Influencers – A Curse or a Blessing?
+How does brand sponsorship impact influencer reputation? 
+
+* [Cheng & Zhang (2023)]()
+
+What is the effect of sponsorship disclosure on influencers?
 
 * [Giuffredi-Kaehr et al (2022)](https://doi.org/10.1177/109499682210756)
 
 
 ---
 class: inverse, center, middle
-# Characteristics of Popular Streamers
+# Which type of influencer should a firm choose?
 
 ---
 class: font160
 # Motivation
 
-**Strategic Question**: What are the key characteristics of popular streamers
+**Strategic Question**: How do an influencer's impressions vary with follower counts? 
 
-* Streamers as an insight into influencers more generally ...
+**Why relevant?**
 
-**Why relevant**:
+* influencers typically paid according to follower base
+* mega: awareness, micro: later in funnel activity
 
-* *Influencer*: Can you "become" more popular?
-* *Firms*: What are characteristics of influencers that get high engagement?  
+Application: TikTok's Discover page
 
-**Observational Study + no "clever" empirical strategy**
-
-$\implies$ **Findings are descriptive**
-
----
-class: font120
-# Research Hypotheses
-
-```{r, echo = FALSE, fig.align = "center", out.width="65%"}
-url <- "figs/influencer_charac_hypotheses.png"
-knitr::include_graphics(url)
-```
-
-**Affordance?** In this paper...
-
-* Profile Information & social interactivity
-
-... as **distinct from professionalism** ... 
-
-* Part of a professional team & gaming proficiency
-
----
-class: font160
-# Data
-
-516 Twitch streamers over three weeks
-
-**Streamer Popularity** (static!): 
-
-* View count
-* Number of followers
-
-**Social Interactivity**: 
-
-* Webcam
-* Words in Transcript 
-* Links to Twitter Profile 
-
-**Personality Traits**:  
-
-* Linguistic Analyses of stream transcripts & tweets
-
----
-# Measurement
-
-```{r, echo = FALSE, fig.align = "center", out.width="70%"}
-url <- "figs/influencer_charac_measurement.png"
-knitr::include_graphics(url)
-```
-
----
-class: font150
-# Regression
-
-Regression equation:
-
-```{r, echo = FALSE, fig.align = "center", out.width="80%"}
-url <- "figs/influencer_charac_regression.png"
-knitr::include_graphics(url)
-```
-
-.center[.font70[Note the lack of subscripts! Don't be **that** person!]]
-
-Remarks:
-
-* PBA: Profile Building Affordance 
-* Same regression with no. of followers as alternative outcome
-
----
-# Results
-
-```{r, echo = FALSE, fig.align = "center", out.width="70%"}
-url <- "figs/influencer_charac_results_main.png"
-knitr::include_graphics(url)
-```
-
-**Remark**: Mind the overly causal language in the results section of the paper
-
----
-class: font160
-# Takeaways
-
-Having:
-
-* Profile Descriptors 
-* Camera On 
-* Talking to your viewers 
-* Being a Professional 
-
-**positively associated** with being more **popular** on Twitch 
-
-**Personality Trait** results are **mixed** ... 
-
-* Openness and conscientiousness negative associated with popularity 
-* Neuroticism positively associated
-
-(**my** worries on this bit: Omitted Variables, measurement errors)
+* "trending content" for > 200 hashtags
+* Over six months
 
 
 ---
 class: inverse, center, middle
-# Video Advertising by Twitch Influencers
+# Do influencers impact product demand?
 
 ---
 class: font160
@@ -207,17 +160,16 @@ class: font160
 
 **Strategic Question**: What is the effectiveness of influencer marketing on consumer demand 
 
-* Application: Twitch & Video Games 
-
 **Why relevant?**
 
 * (Over-) Excitement about influencer marketing 
 * Limited evidence beyond anecdotes 
 * It's **hard** to do, but **worth** trying
 
-No experiment but **clever empirical strategy** 
+No experiment but **clever empirical strategy**  $\implies$ think of most estimates as **causal**
 
-$\implies$ think of most estimates as **casual**
+Application: Twitch & Video Games 
+
 
 ---
 # Twitch
@@ -228,14 +180,18 @@ knitr::include_graphics(url)
 ```
 
 ---
-class: font140
+class: font160
+# What we want to know 
+
+
+.center[How **Viewership of streams impacts demand**]
+
+`r icons::fontawesome("question", style = "solid")` Why won't linear regression suffice?
+
+
+---
+class: font160
 # The Key Idea of the Paper 
-
-.font120[*What they want to estimate*]: 
-
-**Viewership of streams** $\rightarrow$ **demand**
-
-* Question: Why won't linear regression suffice?
 
 .font120[*Ideal Experiment*]:
 
@@ -318,24 +274,24 @@ knitr::include_graphics(url)
 
 Findings: 
 
-* **Small**, positive & statistically significant effects ($\beta$)
-  * Interpret? 
-* Effect **persists over time** ($\delta$)
+* **Small**, positive & statistically significant effects $\rightarrow$ $\beta$
+  * Interpret!
+* Effect **persists over time** $\rightarrow$ $\delta$
 
 ---
 class: font140
 # Heterogeneity Across Products
 
-```{r, echo = FALSE, fig.align = "center", out.width="80%"}
+```{r, echo = FALSE, fig.align = "center", out.width="45%"}
 url <- "figs/video_ads_heterog.png"
 knitr::include_graphics(url)
 ```
 
 Largest Effects: 
 
-* Small publishers 
-* High variance in ratings 
-* Older games  
+* **Small** publishers 
+* **High variance** in ratings 
+* **Older** games  
 
 ---
 class: font140
@@ -347,9 +303,9 @@ url <- "figs/video_ads_sponsored.png"
 knitr::include_graphics(url)
 ```
 
-$\omega < 1$ $\rightarrow$ sponsored content effectiveness is a fraction of organic 
+$\omega < 1$ $\rightarrow$ **sponsored content** effectiveness is a fraction of organic 
 
-* 19.7% as effective as organic streams!
+* **15.7% as effective as organic streams!**
 
 ---
 class: font140
@@ -366,29 +322,44 @@ Cascades: sponsored stream generates additional organic content
 class: font140
 # Cascades 
 
+Suppose a top streamer is sponsored to broadast:
+
+* **Directly increases viewership** by $\hat{\theta}_1$
+* **Induces** an additional $\hat{\theta}_1 \hat{\gamma}$ to **organic broadcasters** 
+* Which **generates**  $\hat{\theta}_1 \hat{\gamma} \times \hat{\theta_2}$ **more viewers**
+* ...
+
 ```{r, echo = FALSE, fig.align = "center", out.width="70%"}
 url <- "figs/video_ads_cascades_totaleffect.png"
 knitr::include_graphics(url)
 ```
 
-* Sponsored streams generate 6.1 streamers to broadcase organically 
-  * $\theta_1 \gamma / (1 - \theta_2 \gamma)$
-* Additional organic streams generate 15,235 new viewers 
-  * ... which are more likely to convert to buyers
+*End result* (Viewers): 
+
+* Induces approx. 3 organic streams 
+* Which is 2.6 times as many viewers than sponsored stream
+
+*End result* (Sales):
+
+* 1.6 sales per 1000 viewers
 
 ---
-# Return on Investment
+# Return on Investment (ROI)
+
+```{r, echo = FALSE, fig.align = "center", out.width="50%"}
+url <- "figs/video_ads_roi_formula.png"
+knitr::include_graphics(url)
+```
 
 ```{r, echo = FALSE, fig.align = "center", out.width="60%"}
 url <- "figs/video_ads_roi.png"
 knitr::include_graphics(url)
 ```
 
-ROI:
-
-* Median game has additional revenue of $9.5 due to sponsored streams
-* 18% of games have positive ROI if **not** account for cascades 
-* 34% of games have positive ROI if account for cascades 
+* Median game has additional revenue of $19.50 due to sponsored streams
+  * Median ROI = -86%
+* 15% of games have positive ROI if **not** account for cascades 
+* 27% of games have positive ROI if account for cascades 
 
 $\implies$ **sponsored influencer promotions are mostly ineffective**
 
@@ -406,7 +377,15 @@ class: font160
 
 ---
 class: inverse, center, middle
-# Sponsorship Disclosure of Influencers 
+# How does brand sponsorship impact influencer reputation?  
+
+---
+class: font160
+# Motivation
+
+---
+class: inverse, center, middle
+# What is the effect of sponsorship disclosure on influencers?
 
 ---
 class: font160
