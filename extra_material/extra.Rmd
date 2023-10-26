@@ -1,0 +1,118 @@
+Understanding Characteristics of Popular Streamers on Live Streaming Platforms: Evidence from Twitch.tv 
+
+* [Zhao et al (2020 )](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3388949)
+
+---
+class: inverse, center, middle
+# Characteristics of Popular Streamers
+
+---
+class: font160
+# Motivation
+
+**Strategic Question**: What are the key characteristics of popular streamers
+
+* Streamers as an insight into influencers more generally ...
+
+**Why relevant**:
+
+* *Influencer*: Can you "become" more popular?
+* *Firms*: What are characteristics of influencers that get high engagement?  
+
+**Observational Study + no "clever" empirical strategy**
+
+$\implies$ **Findings are descriptive**
+
+---
+class: font120
+# Research Hypotheses
+
+```{r, echo = FALSE, fig.align = "center", out.width="65%"}
+url <- "figs/influencer_charac_hypotheses.png"
+knitr::include_graphics(url)
+```
+
+**Affordance?** In this paper...
+
+* Profile Information & social interactivity
+
+... as **distinct from professionalism** ... 
+
+* Part of a professional team & gaming proficiency
+
+---
+class: font160
+# Data
+
+516 Twitch streamers over three weeks
+
+**Streamer Popularity** (static!): 
+
+* View count
+* Number of followers
+
+**Social Interactivity**: 
+
+* Webcam
+* Words in Transcript 
+* Links to Twitter Profile 
+
+**Personality Traits**:  
+
+* Linguistic Analyses of stream transcripts & tweets
+
+---
+# Measurement
+
+```{r, echo = FALSE, fig.align = "center", out.width="70%"}
+url <- "figs/influencer_charac_measurement.png"
+knitr::include_graphics(url)
+```
+
+---
+class: font150
+# Regression
+
+Regression equation:
+
+```{r, echo = FALSE, fig.align = "center", out.width="80%"}
+url <- "figs/influencer_charac_regression.png"
+knitr::include_graphics(url)
+```
+
+.center[.font70[Note the lack of subscripts! Don't be **that** person!]]
+
+Remarks:
+
+* PBA: Profile Building Affordance 
+* Same regression with no. of followers as alternative outcome
+
+---
+# Results
+
+```{r, echo = FALSE, fig.align = "center", out.width="70%"}
+url <- "figs/influencer_charac_results_main.png"
+knitr::include_graphics(url)
+```
+
+**Remark**: Mind the overly causal language in the results section of the paper
+
+---
+class: font160
+# Takeaways
+
+Having:
+
+* Profile Descriptors 
+* Camera On 
+* Talking to your viewers 
+* Being a Professional 
+
+**positively associated** with being more **popular** on Twitch 
+
+**Personality Trait** results are **mixed** ... 
+
+* Openness and conscientiousness negative associated with popularity 
+* Neuroticism positively associated
+
+(**my** worries on this bit: Omitted Variables, measurement errors)
