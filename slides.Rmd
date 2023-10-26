@@ -158,7 +158,7 @@ class: inverse, center, middle
 class: font160
 # Motivation
 
-**Strategic Question**: What is the effectiveness of influencer marketing on consumer demand 
+**Strategic Question**: What is the effectiveness of influencer marketing on consumer demand? 
 
 **Why relevant?**
 
@@ -166,9 +166,12 @@ class: font160
 * Limited evidence beyond anecdotes 
 * It's **hard** to do, but **worth** trying
 
-No experiment but **clever empirical strategy**  $\implies$ think of most estimates as **causal**
+**Methods**:
 
-Application: Twitch & Video Games 
+* No experiment but **clever empirical strategy**  
+* $\implies$ think of most estimates as **causal**
+
+**Application**: Twitch & Video Games 
 
 
 ---
