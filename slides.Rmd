@@ -543,11 +543,11 @@ class: font160
 Suggested Citation:
 
 ```{r, engine='out', eval = FALSE}
-@misc{deerdsms2022,
+@misc{deerdsms2023,
       title={"Digital and Social Media Strategies: Influencers"},
       author={Lachlan Deer},
-      year={2022},
-      url = "https://github.com/tisem-digital-marketing/dsms-lecture-13-influencers"
+      year={2023},
+      url = "https://github.com/deer-marketing-lab/dsms-lecture-influencers"
 }
 ```
 
