@@ -114,7 +114,7 @@ class: font160
 
 Which type of influencer should a firm choose?
 
-* [Tian, Dew & Iyengar (2023)]()
+* [Tian, Dew & Iyengar (2023)](https://rtdew1.github.io/tiktok.pdf)
 
 Do influencers impact product demand?
 
@@ -141,14 +141,208 @@ class: font160
 
 **Why relevant?**
 
-* influencers typically paid according to follower base
-* mega: awareness, micro: later in funnel activity
+* Influencers typically paid according to follower base
+* Different types $\rightarrow$ different effects
+  * Mega: awareness 
+  * Micro: consideration, intent, purchase 
 
-Application: TikTok's Discover page
+**Application**: TikTok's Discover page
 
 * "trending content" for > 200 hashtags
 * Over six months
 
+---
+class: font150
+# Model Free Evidence 
+
+```{r, echo = FALSE, fig.align = "center", out.width="80%"}
+url <- "figs/tiktok_modelfree.png"
+knitr::include_graphics(url)
+```
+
+.center[Want a **non-linear** relationship between followers and impressions]
+
+`r icons::fontawesome("question", style = "solid")` How would you go about answering the problem?
+`r icons::fontawesome("question", style = "solid")` What would be your "ideal experiment?"
+
+
+
+---
+class:font150
+# The Authors' "Ideal" Experiment 
+
+Imagine a **company knows the type of influencer** they want to hire
+
+<br>
+
+* Suppose **many "identical" influencers** of this type, but **vary only by followers count** 
+
+* Could **collaborate with each at different points in time**
+
+* Measure the **effect of followers on impressions** 
+
+* This **traces out the relationship** they're interested in
+
+<br>
+
+`r icons::fontawesome("question", style = "solid")`Is this *really* the optimal experiemnt?
+
+---
+class:font160
+# What the authors actually do 
+
+The thought experiment that underpins their analysis: 
+
+* **Many potential influencers** company can collaborate with
+  * Who **create similar content**, match desired "influencer profile"
+  * **Vary in follower counts** 
+
+* Assume the "exchangability" of influencers 
+
+
+`r icons::fontawesome("rocket", style = "solid")`If company paid for more followers, would campaign metrics have differed?
+
+
+---
+class: font150
+# Collecting Data from Posts
+
+`r icons::fontawesome("question", style = "solid")` How to get data from posts?
+
+```{r, echo = FALSE, fig.align = "center", out.width="70%"}
+url <- "figs/tiktok_posts.png"
+knitr::include_graphics(url)
+```
+
+`r icons::fontawesome("question", style = "solid")` Why do they need this?
+
+---
+class: font150
+# Collecting Data from Posts
+
+**Answer 1**: Machine learning
+
+```{r, echo = FALSE, fig.align = "center", out.width="50%"}
+url <- "figs/tiktok_ml_posts.png"
+knitr::include_graphics(url)
+```
+
+Extracts the "data":
+
+* Text 
+* Image 
+* Audio 
+* Editing style
+
+**Answer 2**: In class...
+
+---
+class: font150
+# Estimating Follower Elasticities 
+
+**Estimating equation**:
+
+$$log(Impressions_j) = g(log(Followers_{ij}), ControlVariables_j) + e_j$$
+
+**Challenge**:
+
+* Follower counts likely correlated with unobservables (in the $e_j$)
+
+$\implies$ need some extra work to claim causality 
+
+**Solution**: "An extra modelling equation"
+
+* Explains $log(Followers_{ij})$ via likes of *similar* content creators 
+
+<br>
+
+.font70[**Remark**: This won't be in the exam ... it's quite subtle]
+
+---
+class: font140
+# Main Result
+
+
+```{r, echo = FALSE, fig.align = "center", out.width="80%"}
+url <- "figs/tiktok_avg_fei.png"
+knitr::include_graphics(url)
+```
+
+**Key Takeaways**: 
+
+* U-shaped
+* Largest follower elasticity at 6,500 followers
+* Similar magnitudes* to advertising effectiveness
+
+---
+class: font140
+# Role of Engagement Tactics
+
+
+```{r, echo = FALSE, fig.align = "center", out.width="80%"}
+url <- "figs/tiktok_engagement_tactics.png"
+knitr::include_graphics(url)
+```
+
+**Key Takeaways**: 
+
+* Less than 10K followers: informative content leads to more impressions 
+* Large follower base: "socializing" content leads to more impressions
+  * Though less effective *on average*
+* Entertaining content similar effect as informational
+
+---
+# Influencer Type Counterfactuals
+
+.pull-left[
+```{r, echo = FALSE, fig.align = "center", out.width="100%"}
+url <- "figs/tiktok_counterfactuals.png"
+knitr::include_graphics(url)
+```
+]
+.pull-right[
+**S-shaped**: "Special Effects" focussed campaign
+
+* Only catches on if popular enough influencer posts it
+
+<br>
+
+**Concave**: Product Demonstration focussed campaign
+
+* Niche audiences for this content
+
+<br>
+
+**Linear**: Self Expression focussed campaign 
+
+* Broad appeal to all audiences
+* This is the most frequent in the data
+]
+
+---
+class: font160
+# Optimal Influencer Selection
+
+```{r, echo = FALSE, fig.align = "center", out.width="100%"}
+url <- "figs/tiktok_optimal_influencer.png"
+knitr::include_graphics(url)
+```
+
+Assume value/impression and cost per 1K followers 
+
+$\rightarrow$ optimal number of followers for a campaign
+
+---
+class: font150
+# Takeaways
+
+* If campaign focused around "social content" and socialization: influencers with a higher follower count
+
+* If campaign focused around information: lower follower counts 
+  * Why? Trust and authenticity
+
+* Once we can quantify elasticity of impressions with respect to followers, we can establish the optimal follower count to target for a new campaign
+  * Conditional on knowing cost per followers *and* assuming value generated per impression 
 
 ---
 class: inverse, center, middle
