@@ -563,8 +563,14 @@ class: font160
 * **Small, positive effects** of organic influencer content **on demand** 
   * Similar in magnitude to OWoM volume and advertising 
   * ... which helps these numbers feel credible 
+
+<br>
+
 * **Sponsoring influencers** leads even **smaller effects** (approx 1/5th!)
   * But does lead to cascades of organic content 
+
+<br>
+
 * **ROI** for sponsored content is **negative for 2/3rds of games**
 
 
