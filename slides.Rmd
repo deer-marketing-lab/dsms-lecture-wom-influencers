@@ -120,11 +120,7 @@ Do influencers impact product demand?
 
 * [Huang & Morozov (2023)](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4065064)
 
-How does brand sponsorship impact influencer reputation? 
-
-* [Cheng & Zhang (2023)]()
-
-What is the effect of sponsorship disclosure on influencers?
+What is the effect of sponsorship (non-)disclosure on influencers and brands?
 
 * [Giuffredi-Kaehr et al (2022)](https://doi.org/10.1177/109499682210756)
 
@@ -571,14 +567,6 @@ class: font160
   * But does lead to cascades of organic content 
 * **ROI** for sponsored content is **negative for 2/3rds of games**
 
-
----
-class: inverse, center, middle
-# How does brand sponsorship impact influencer reputation?  
-
----
-class: font160
-# Motivation
 
 ---
 class: inverse, center, middle
