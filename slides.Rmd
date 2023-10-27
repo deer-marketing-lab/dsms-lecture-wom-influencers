@@ -17,13 +17,12 @@ class: font160
 
 # Learning Goals for this Week
 
-* Identify traits of an influencer and their account that correlate with their popularity 
-
+* Discuss the importance of follower counts of influencers on their posts impressions
+* Summarize existing results on the follower elasticity of impressions
+* Describe how to select influencers based on their follower counts
 * Explain how to quantify the effect of influencers on product demand 
 * Describe the relative effectivess of sponsored content on demand relative to organic content 
 * Outline how sponsorship disclosure by influencers impacts consumer perceptions of them and the brand they are advertising
-
-UPDATE
 
 ---
 class: inverse, center, middle
