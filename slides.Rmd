@@ -594,6 +594,8 @@ class: font160
 * Increase regulation mandated by governments ...
 * ... But actual uptake is still low
 
+**Application**: a Lab Experiment (Why?)
+
 ---
 class: font140
 # Conceptual Framework
@@ -603,22 +605,19 @@ url <- "figs/disclosure_conceptual.png"
 knitr::include_graphics(url)
 ```
 
-We're off to the (online) lab to get at these answers 
-
-* Discussion Q: Why?
-
 ---
 class: font140
 # Experiments: An Overview
 
-**Study 1a**: Influencer Type on persuasion knowledge? What are the impacts on brand eval and likeability?
+**Study 1a**: Influencer Type on persuasion knowledge and trustworthiness? 
+  * What are the impacts on brand evaluation and influencer likeability?
 
 **Study 1b**: Replicates Study 1a with "more control"
 
 * Less info about influencer changing simultaneously
 * (Won't discuss this here)
 
-**Study 2**: What does disclosure vs non disclosure do? 
+**Study 2**: What does **disclosure vs non-disclosure** do? 
 
 **Study 3**: Replicates Study 2 with real influencers
 * (Won't discuss this here)
@@ -635,7 +634,7 @@ The Basics:
 
 * Industry: **Food, Instagram** 
 
-* Participants: 282 **Western Europeans** 
+* Participants: 282 Western Europeans
 
 ---
 class: font130
@@ -664,7 +663,7 @@ url <- "figs/disclosure_study_1_results.png"
 knitr::include_graphics(url)
 ```
 
-Takeaways: 
+**Takeaways**: 
 
 * Mediation via persuasion knowledge for macro, mega, nano 
 * No Mediation via trustworthiness of the post 
@@ -676,14 +675,15 @@ Persuasion Knowledge?
 $\implies$ when consumers think something is sponsored and can't be verified perceptions go down
 
 ---
+class: font150
 # Study 2 
 
-2 x 2 design: 
+**2 x 2 design**: 
 
-* nano vs mega 
-* non-disclosure vs disclosure 
+* Nano vs Mega 
+* Non-disclosure vs disclosure 
 
-```{r, echo = FALSE, fig.align = "center", out.width="60%"}
+```{r, echo = FALSE, fig.align = "center", out.width="50%"}
 url <- "figs/disclosure_study_2_manip.png"
 knitr::include_graphics(url)
 ```
@@ -718,7 +718,9 @@ class: inverse, center, middle
 class: font160
 # Summary
 
-* Characteristics of an influencer and their content delivery are associated with their popular
+* Quantifying causal relationship between followers and impression is difficult 
+  * But allows us to choose the "right" influencer for a campaign 
+  * (with additional assumptions)
 
 * Organic influencers have small, positive effect on demand
 
@@ -726,7 +728,7 @@ class: font160
   * More work needed to generalize this
 
 * Disclosing post is sponsored prevents negative association from consumers to influencer and brands 
-  * What does it do to engagement and purchase intentions?
+  * Unanswered: What does it do to engagement and purchase intentions?
 
 ---
 # License & Citation
