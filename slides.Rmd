@@ -180,7 +180,7 @@ Imagine a **company knows the type of influencer** they want to hire
 
 <br>
 
-`r icons::fontawesome("question", style = "solid")`Is this *really* the optimal experiemnt?
+`r icons::fontawesome("question", style = "solid")`Is this *really* the optimal experiment?
 
 ---
 class:font160
@@ -188,7 +188,7 @@ class:font160
 
 The thought experiment that underpins their analysis: 
 
-* **Many potential influencers** company can collaborate with
+* **Many potential influencers** that a company can collaborate with
   * Who **create similar content**, match desired "influencer profile"
   * **Vary in follower counts** 
 
@@ -443,11 +443,11 @@ $\delta$ $\rightarrow$ persistant effect of viewership
 class: font140
 # Empirical Strategy
 
-**How to they use streamer's timing of broadcast?** 
+**How do they use streamer's timing of broadcast?** 
 
 * Technically: **instrumental variables**
 * To overcome omitted variable bias and simultaneity
-* See digram in class ... 
+* See diagram in class ... 
 
 What are the instruments?
 
@@ -514,7 +514,7 @@ Cascades: sponsored stream generates additional organic content
 class: font140
 # Cascades 
 
-Suppose a top streamer is sponsored to broadast:
+Suppose a top streamer is sponsored to broadcast:
 
 * **Directly increases viewership** by $\hat{\theta}_1$
 * **Induces** an additional $\hat{\theta}_1 \hat{\gamma}$ to **organic broadcasters** 
@@ -550,8 +550,8 @@ knitr::include_graphics(url)
 
 * Median game has additional revenue of $19.50 due to sponsored streams
   * Median ROI = -86%
-* 15% of games have positive ROI if **not** account for cascades 
-* 27% of games have positive ROI if account for cascades 
+* 15% of games have positive ROI if do **not** account for cascades 
+* 27% of games have positive ROI if do account for cascades 
 
 $\implies$ **sponsored influencer promotions are mostly ineffective**
 
@@ -696,7 +696,7 @@ url <- "figs/disclosure_study_2_results_fig.png"
 knitr::include_graphics(url)
 ```
 
-* When no disclosure, when respondant thinks post is sponsored their trust in post content falls
+* If no disclosure, when respondant thinks post is sponsored their trust in post content falls
   * Leads to lower evals of influencer and brand (not shown)
 * **NOT** the case when sponsorship is disclosed
 
@@ -726,7 +726,7 @@ class: font160
 * Sponsored content appears to have negative ROI (on twitch, in gaming)
   * More work needed to generalize this
 
-* Disclosing post is sponsored prevents negative association from consumers to influencer and brands 
+* Disclosing post as sponsored prevents negative association from consumers to influencer and brands 
   * Unanswered: What does it do to engagement and purchase intentions?
 
 ---
