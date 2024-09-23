@@ -1,5 +1,5 @@
 ---
-title: "Influencers"
+title: "Consumer Word of Mouth & Influencers"
 subtitle: "Digital and Social Media Strategies"
 author: "Lachlan Deer"
 institute: "Tilburg University"
@@ -17,6 +17,8 @@ class: font160
 
 # Learning Goals for this Week
 
+UPDATE
+
 * Discuss the importance of follower counts of influencers on their posts impressions
 * Summarize existing results on the follower elasticity of impressions
 * Describe how to select influencers based on their follower counts
@@ -33,33 +35,255 @@ class: inverse, center, middle
 class: font160
 # Where Are We Now? 
 
+```{r, echo = FALSE, fig.align = "center", out.width="35%"}
+url <- "figs/pngtree-pile-of-cartoonish-cute-doodle-theme-books-png-image_6871556.png"
+knitr::include_graphics(url)
+```
+
 Course Themes:
 
-1. Classical Approaches to Measuring Advertising Effects
-2. Modern Evaluation of Digital Advertising Effects
+1. `r icons:::icon_style(icons::fontawesome("check", style = "solid"), scale = 1)` Measuring Advertising Effects
 2. **User Generated Content & Social Media**
-3. Email & Mobile Marketing
-4. Issues in (Massive) Online Marketplaces
-5. Impact of Privacy Regulations 
-
+  * `r icons:::icon_style(icons::fontawesome("check", style = "solid"), scale = 1)` Online Reviews
+  * `r icons:::icon_style(icons::fontawesome("bullseye", style = "solid"), scale = 1)` Word of Mouth & Influencers
 
 ---
 class: font160
-# Our learning journey... 
+# Today's Topic Coverage
 
-.center[.font120[Understanding causal effects of Social Media on Marketing Outcomes]]
+Does consumer online word-of-mouth increase demand? How?
 
-<br>
+* [Seiler, Yao and Wang (2017)](https://pubsonline.informs.org/doi/abs/10.1287/mksc.2017.1045)
 
-*Previously*: User Generated Content, Ratings and Reviews
+Do influencers impact product demand?
 
-**Today**: **Influencers**
+* [Huang & Morozov (2023)](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4065064)
 
-*Next Week*: Word of Mouth and Viral Marketing
+Which type of influencer should a firm choose?
 
-<br>
+* [Tian, Dew & Iyengar (2023)](https://rtdew1.github.io/tiktok.pdf)
 
-`r icons::fontawesome("rocket", style = "solid")` Challenge: Hard to run controlled field experiments on social media content
+What are the effects of influencer disclosure regulations?
+
+* [Ershov & Mitchell (2024)](https://drive.google.com/file/d/1uCmHOTdUodWg71a2x69LKkldyhnG52VA/view)
+
+---
+class: inverse, center, middle
+
+# Consumer Word of Mouth
+
+---
+class: font160
+# What is Word of Mouth Marketing?
+
+Consumer's interest in a company's product or service is reflected in their "daily dialogues"
+
+* Why is this *new* in "social media"?
+  * It isn't a new idea ...
+  * The "social web" with it's increasing connectivity makes it more salient
+  * ... and measurable
+
+---
+class: font160
+# Types of Word of Mouth 
+
+**Organic word of mouth**:
+
+* People become advocates for a product and have a desire to share their views.
+* **This is our focus this week**
+
+**Amplified word of mouth**: 
+
+* Marketers launch campaigns designed to encourage or accelerate WoM in existing or new communities.
+* We'll come back to this later in the course -- "Firm Generated Content"
+
+**Online versus Offline**
+
+* Distinction is always lurking in the background
+
+---
+class: font160
+# Social Media Word of Mouth Matters
+
+* Consumers now spend more than 135 mins per day on social media
+    - Social media sites contain a treasure-trove of decision relevant information
+    - Twitter is the main platform for opinion exchange
+
+* Social Media fostered growing importance of WoM marketing
+
+* Chief Marketing Officers think online WoM matters
+    - ... Rationalized by consumer's trust in online info from peers (Nielsen, 2013)
+    - 64% of marketing executives believe word of mouth is the most effective form of marketing
+    - Only 6% say they have mastered it.
+
+---
+class: font160
+# Why Word of Mouth Might Matter
+
+Three mechanisms at play:
+
+1. Awareness
+2. Buzz
+3. Social learning
+
+Most often we see:
+
+* Awareness & Buzz $\rightarrow$ volume of tweets
+* Social learning $\rightarrow$ sentiment in tweet's text
+  * Sentiment often called valence
+
+---
+class: font160
+# Tweet Volume Measures Awareness and Buzz
+
+* Awareness
+    * Introduces new consumers to a product
+    * Reminds consumers about product
+    * Reinforce traditional advertising
+* Buzz: expressions of anticipation
+    * Increase in anticipation $\rightarrow$ increase in volume of posts
+        * By consumers who want to act as opinion leaders, and reflect their interests, excitement, and expectations
+        * Generally "neutral" in sentiment
+
+---
+class: font160
+# Sentiment Measures Quality
+
+* Sentiment expressed tweet's text provides means to measure quality
+* Tweet Sentiment impacts sales via social learning
+    * Quality revealed through interactions with their peers
+    * Relevant if consumer's use these reviews to decide what to attend
+
+* Important to control for other ways consumers learn about quality
+
+---
+class: font160
+# Why Should We Care?
+
+- Social media can generate awareness, buzz and information diffusion that ultimately influences demand
+- Important when:
+    1. Relying on "hyped release strategies"
+    2. Uncertainty about a product's quality
+- Examples: movies, books, consumer electronics, video games, fashion
+
+.center[**Most relevant for new products early in release**]
+
+---
+class: font160
+# Online WoM & Causality
+
+**Motivation**: Causal inference is particularly difficult in the realm of online WOM due to the fact that
+firms are not directly in control of the amount of WOM.
+
+**Specific Questions**:
+
+* What is the demand elasticity of demand wrt volume of posts?
+* What is the mechanism through which online WoM influences choice?
+
+**How?**: Natural experiment -- shutdown if Sina Weibo due to political events in mainland China but not HK
+
+* Sina Weibo $\approx$ Chinese Twitter
+
+---
+class: font160
+# Empirical Approach
+
+**Industry**: TV show viewership -- soapies
+
+* Not really **new** products
+
+**Data**:
+
+* TV ratings (i.e. viewership) at episode/city level in mainland China and HK
+* Microblogging activity about each show
+
+**The Natural Experiment**: Censorship block on Sina Weibo
+
+* Large, random shock, unrelated to TV
+* Block in mainland China, **but not** HK
+
+---
+class: font150
+# Difference in Differences
+
+$$
+\begin{aligned}
+LogRating_{jt} = \alpha Block_{t}  &+ \beta Mainland_{j} + \delta_j Block_{t} \times Mainland_{j} \\ 
+                                   &+ Weekday_t' \gamma + \varepsilon_{jt}
+\end{aligned}
+$$
+
+For causality ...
+
+* Valid Counterfactual: HK approximates China
+* No Selection on Unobservables: Nothing unobserved driving treatment
+
+---
+# Graphical Evidence I
+
+```{r, echo = FALSE, fig.align = "center", out.width="100%"}
+knitr::include_graphics("figs/seiler_comments.png")
+```
+
+---
+# Graphical Evidence II
+
+```{r, echo = FALSE, fig.align = "center", out.width="100%"}
+knitr::include_graphics("figs/seiler_ratings.png")
+```
+
+---
+# Diff in Diff Results
+
+```{r, echo = FALSE, fig.align = "center", out.width="75%"}
+knitr::include_graphics("figs/seiler_did.png")
+```
+
+---
+# What is the Mechanism?
+
+```{r, echo = FALSE, fig.align = "center", out.width="50%"}
+knitr::include_graphics("figs/seiler_mechanism.png")
+```
+
+---
+class: font160
+# Takeaways
+
+* Estimated Volume elasticity: between 0.016 and 0.026
+
+* WoM influnces demand via consumption complementarities 
+  * Can chat about it later online
+
+* Managerial Implications:
+  * Fostering post-show discussion
+  * Doesn't appear to be valence effects 
+    * (maybe because quality is known?)
+
+---
+class: font140
+# Recent Developments
+
+.center[
+**How far to "believable" numbers can get get without experimental variation?** 
+
+**Can we reconcile the volume vs sentiment debate?**
+]
+
+* If we can **control** for (almost) all the omitted variables
+* Studied by [Deer, Crawford, Chintagunta (2022)](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4227912) 
+
+**Setting**: US Movie Industry & Twitter WoM, i.e. **new** products
+
+**Findings**: 
+
+* Distinguish Pre- vs Post- release volume and sentiment
+* Volume **and** sentiment significant
+* Small(-ish) volume elasticities, larger sentiment elasticities 
+* Differs across **types** of movies
+  *  Buzz: Franchise movies, 
+  *  Awareness: (expected) mid-tier movies, 
+  *  Social learning: (expected) small movies
 
 ---
 class: inverse, center, middle
@@ -105,239 +329,6 @@ class: font150
 <!--- 
 borrowed roughly from here https://influencermarketinghub.com/influencer-marketing-benchmark-report-2020/
 --->
-
----
-class: font160
-# Today's Topic Coverage
-
-
-Which type of influencer should a firm choose?
-
-* [Tian, Dew & Iyengar (2023)](https://rtdew1.github.io/tiktok.pdf)
-
-Do influencers impact product demand?
-
-* [Huang & Morozov (2023)](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4065064)
-
-What is the effect of sponsorship (non-)disclosure on influencers and brands?
-
-* [Giuffredi-Kaehr et al (2022)](https://doi.org/10.1177/109499682210756)
-
-
----
-class: inverse, center, middle
-# Which type of influencer should a firm choose?
-
----
-class: font160
-# Motivation
-
-**Strategic Question**: How do an influencer's impressions vary with follower counts? 
-
-**Why relevant?**
-
-* Influencers typically paid according to follower base
-* Different types $\rightarrow$ different effects
-  * Mega: awareness 
-  * Micro: consideration, intent, purchase 
-
-**Application**: TikTok's Discover page
-
-* "trending content" for > 200 hashtags
-* Over six months
-
----
-class: font150
-# Model Free Evidence 
-
-```{r, echo = FALSE, fig.align = "center", out.width="80%"}
-url <- "figs/tiktok_modelfree.png"
-knitr::include_graphics(url)
-```
-
-.center[Want a **non-linear** relationship between followers and impressions]
-
-`r icons::fontawesome("question", style = "solid")` How would you go about answering the problem?
-`r icons::fontawesome("question", style = "solid")` What would be your "ideal experiment?"
-
-
-
----
-class:font150
-# The Authors' "Ideal" Experiment 
-
-Imagine a **company knows the type of influencer** they want to hire
-
-<br>
-
-* Suppose **many "identical" influencers** of this type, but **vary only by followers count** 
-
-* Could **collaborate with each at different points in time**
-
-* Measure the **effect of followers on impressions** 
-
-* This **traces out the relationship** they're interested in
-
-<br>
-
-`r icons::fontawesome("question", style = "solid")`Is this *really* the optimal experiment?
-
----
-class:font160
-# What the authors actually do 
-
-The thought experiment that underpins their analysis: 
-
-* **Many potential influencers** that a company can collaborate with
-  * Who **create similar content**, match desired "influencer profile"
-  * **Vary in follower counts** 
-
-* Assume the "exchangability" of influencers 
-
-
-`r icons::fontawesome("rocket", style = "solid")`If company paid for more followers, would campaign metrics have differed?
-
-
----
-class: font150
-# Collecting Data from Posts
-
-`r icons::fontawesome("question", style = "solid")` How to get data from posts?
-
-```{r, echo = FALSE, fig.align = "center", out.width="70%"}
-url <- "figs/tiktok_posts.png"
-knitr::include_graphics(url)
-```
-
-`r icons::fontawesome("question", style = "solid")` Why do they need this?
-
----
-class: font150
-# Collecting Data from Posts
-
-**Answer 1**: Machine learning
-
-```{r, echo = FALSE, fig.align = "center", out.width="50%"}
-url <- "figs/tiktok_ml_posts.png"
-knitr::include_graphics(url)
-```
-
-Extracts the "data":
-
-* Text 
-* Image 
-* Audio 
-* Editing style
-
-**Answer 2**: In class...
-
----
-class: font150
-# Estimating Follower Elasticities 
-
-**Estimating equation**:
-
-$$log(Impressions_j) = g(log(Followers_{ij}), ControlVariables_j) + e_j$$
-
-**Challenge**:
-
-* Follower counts likely correlated with unobservables (in the $e_j$)
-
-$\implies$ need some extra work to claim causality 
-
-**Solution**: "An extra modelling equation"
-
-* Explains $log(Followers_{ij})$ via likes of *similar* content creators 
-
-<br>
-
-.font70[**Remark**: This won't be in the exam ... it's quite subtle]
-
----
-class: font140
-# Main Result
-
-
-```{r, echo = FALSE, fig.align = "center", out.width="80%"}
-url <- "figs/tiktok_avg_fei.png"
-knitr::include_graphics(url)
-```
-
-**Key Takeaways**: 
-
-* U-shaped
-* Largest follower elasticity at 6,500 followers
-* Similar magnitudes* to advertising effectiveness
-
----
-class: font140
-# Role of Engagement Tactics
-
-
-```{r, echo = FALSE, fig.align = "center", out.width="80%"}
-url <- "figs/tiktok_engagement_tactics.png"
-knitr::include_graphics(url)
-```
-
-**Key Takeaways**: 
-
-* Less than 10K followers: informative content leads to more impressions 
-* Large follower base: "socializing" content leads to more impressions
-  * Though less effective *on average*
-* Entertaining content similar effect as informational
-
----
-# Influencer Type Counterfactuals
-
-.pull-left[
-```{r, echo = FALSE, fig.align = "center", out.width="100%"}
-url <- "figs/tiktok_counterfactuals.png"
-knitr::include_graphics(url)
-```
-]
-.pull-right[
-**S-shaped**: "Special Effects" focussed campaign
-
-* Only catches on if popular enough influencer posts it
-
-<br>
-
-**Concave**: Product Demonstration focussed campaign
-
-* Niche audiences for this content
-
-<br>
-
-**Linear**: Self Expression focussed campaign 
-
-* Broad appeal to all audiences
-* This is the most frequent in the data
-]
-
----
-class: font160
-# Optimal Influencer Selection
-
-```{r, echo = FALSE, fig.align = "center", out.width="100%"}
-url <- "figs/tiktok_optimal_influencer.png"
-knitr::include_graphics(url)
-```
-
-Assume value/impression and cost per 1K followers 
-
-$\rightarrow$ optimal number of followers for a campaign
-
----
-class: font150
-# Takeaways
-
-* If campaign focused around "social content" and socialization: influencers with a higher follower count
-
-* If campaign focused around information: lower follower counts 
-  * Why? Trust and authenticity
-
-* Once we can quantify elasticity of impressions with respect to followers, we can establish the optimal follower count to target for a new campaign
-  * Conditional on knowing cost per followers *and* assuming value generated per impression 
 
 ---
 class: inverse, center, middle
@@ -572,141 +563,283 @@ class: font160
 
 * **ROI** for sponsored content is **negative for 2/3rds of games**
 
+---
+class: inverse, center, middle
+# Which type of influencer should a firm choose?
+
+---
+class: font160
+# Motivation
+
+**Strategic Question**: How do an influencer's impressions vary with follower counts? 
+
+**Why relevant?**
+
+* Influencers typically paid according to follower base
+* Different types $\rightarrow$ different effects
+  * Mega: awareness 
+  * Micro: consideration, intent, purchase 
+
+**Application**: TikTok's Discover page
+
+* "trending content" for > 200 hashtags
+* Over six months
+
+---
+class: font150
+# Model Free Evidence 
+
+```{r, echo = FALSE, fig.align = "center", out.width="80%"}
+url <- "figs/tiktok_modelfree.png"
+knitr::include_graphics(url)
+```
+
+.center[Want a **non-linear** relationship between followers and impressions]
+
+`r icons::fontawesome("question", style = "solid")` How would you go about answering the problem?
+`r icons::fontawesome("question", style = "solid")` What would be your "ideal experiment?"
+
+
+
+---
+class:font150
+# The Authors' "Ideal" Experiment 
+
+Imagine a **company knows the type of influencer** they want to hire
+
+<br>
+
+* Suppose **many "identical" influencers** of this type, but **vary only by followers count** 
+
+* Could **collaborate with each at different points in time**
+
+* Measure the **effect of followers on impressions** 
+
+* This **traces out the relationship** they're interested in
+
+<br>
+
+`r icons::fontawesome("question", style = "solid")`Is this *really* the optimal experiment?
+
+---
+class:font160
+# What the authors actually do 
+
+The thought experiment that underpins their analysis: 
+
+* **Many potential influencers** that a company can collaborate with
+  * Who **create similar content**, match desired "influencer profile"
+  * **Vary in follower counts** 
+
+* Assume the "exchangability" of influencers 
+
+
+`r icons::fontawesome("rocket", style = "solid")`If company paid for more followers, would campaign metrics have differed?
+
+
+---
+class: font150
+# Collecting Data from Posts
+
+`r icons::fontawesome("question", style = "solid")` How to get data from posts?
+
+```{r, echo = FALSE, fig.align = "center", out.width="70%"}
+url <- "figs/tiktok_posts.png"
+knitr::include_graphics(url)
+```
+
+`r icons::fontawesome("question", style = "solid")` Why do they need this?
+
+---
+class: font150
+# Collecting Data from Posts
+
+**Answer 1**: Machine learning
+
+```{r, echo = FALSE, fig.align = "center", out.width="50%"}
+url <- "figs/tiktok_ml_posts.png"
+knitr::include_graphics(url)
+```
+
+Extracts the "data":
+
+* Text 
+* Image 
+* Audio 
+* Editing style
+
+**Answer 2**: In class...
+
+---
+class: font150
+# Estimating Follower Elasticities 
+
+**Estimating equation**:
+
+$$log(Impressions_j) = g(log(Followers_{ij}), ControlVariables_j) + e_j$$
+
+**Challenge**:
+
+* Follower counts likely correlated with unobservables (in the $e_j$)
+
+$\implies$ need some extra work to claim causality 
+
+**Solution**: "An extra modelling equation"
+
+* Explains $log(Followers_{ij})$ via likes of *similar* content creators 
+
+<br>
+
+.font70[**Remark**: This won't be in the exam ... it's quite subtle]
+
+---
+class: font140
+# Main Result
+
+
+```{r, echo = FALSE, fig.align = "center", out.width="80%"}
+url <- "figs/tiktok_avg_fei.png"
+knitr::include_graphics(url)
+```
+
+**Key Takeaways**: 
+
+* U-shaped
+* Largest follower elasticity at 6,500 followers
+* Similar magnitudes* to advertising effectiveness
+
+---
+class: font140
+# Role of Engagement Tactics
+
+
+```{r, echo = FALSE, fig.align = "center", out.width="80%"}
+url <- "figs/tiktok_engagement_tactics.png"
+knitr::include_graphics(url)
+```
+
+**Key Takeaways**: 
+
+* Less than 10K followers: informative content leads to more impressions 
+* Large follower base: "socializing" content leads to more impressions
+  * Though less effective *on average*
+* Entertaining content similar effect as informational
+
+---
+# Influencer Type Counterfactuals
+
+.pull-left[
+```{r, echo = FALSE, fig.align = "center", out.width="100%"}
+url <- "figs/tiktok_counterfactuals.png"
+knitr::include_graphics(url)
+```
+]
+.pull-right[
+**S-shaped**: "Special Effects" focussed campaign
+
+* Only catches on if popular enough influencer posts it
+
+<br>
+
+**Concave**: Product Demonstration focussed campaign
+
+* Niche audiences for this content
+
+<br>
+
+**Linear**: Self Expression focussed campaign 
+
+* Broad appeal to all audiences
+* This is the most frequent in the data
+]
+
+---
+class: font160
+# Optimal Influencer Selection
+
+```{r, echo = FALSE, fig.align = "center", out.width="100%"}
+url <- "figs/tiktok_optimal_influencer.png"
+knitr::include_graphics(url)
+```
+
+Assume value/impression and cost per 1K followers 
+
+$\rightarrow$ optimal number of followers for a campaign
+
+---
+class: font150
+# Takeaways
+
+* If campaign focused around "social content" and socialization: influencers with a higher follower count
+
+* If campaign focused around information: lower follower counts 
+  * Why? Trust and authenticity
+
+* Once we can quantify elasticity of impressions with respect to followers, we can establish the optimal follower count to target for a new campaign
+  * Conditional on knowing cost per followers *and* assuming value generated per impression 
+
+
+
 
 ---
 class: inverse, center, middle
-# What is the effect of sponsorship disclosure on influencers?
+
+# Effects of Influencer Advertising Disclosure Regulations
+
 
 ---
 class: font160
-# Motivation 
+# Influencers as Advertisers
 
-**Strategic Question**: How does sponsorship disclosure impact consumer evaluations of brands and influencers?
+**Motivation**: Concern and growing regulation around hidden sponsorship
 
-* And does it differ across influencer type?
+**Specific Question**:
 
-**Why Relevant?**
+* What to advertising disclosure regulations do to content engagement?
 
-* Sponsored influencer posts used to be the "wild west" of advertising
-  * i.e. unregulated, left to consumers to discern 
-  * Unlike most advertising markets
-* Increase regulation mandated by governments ...
-* ... But actual uptake is still low
-
-**Application**: a Lab Experiment (Why?)
-
----
-class: font140
-# Conceptual Framework
-
-```{r, echo = FALSE, fig.align = "center", out.width="80%"}
-url <- "figs/disclosure_conceptual.png"
-knitr::include_graphics(url)
-```
-
----
-class: font140
-# Experiments: An Overview
-
-**Study 1a**: Influencer Type on persuasion knowledge and trustworthiness? 
-  * What are the impacts on brand evaluation and influencer likeability?
-
-**Study 1b**: Replicates Study 1a with "more control"
-
-* Less info about influencer changing simultaneously
-* (Won't discuss this here)
-
-**Study 2**: What does **disclosure vs non-disclosure** do? 
-
-**Study 3**: Replicates Study 2 with real influencers
-* (Won't discuss this here)
-
----
-class: font150
-# Study 1a
-
-The Basics: 
-
-* **Fictitious** influencers 
-
-* Influencer **Types**: Nano, micro, macro, mega, nano
-
-* Industry: **Food, Instagram** 
-
-* Participants: 282 Western Europeans
-
----
-class: font130
-# Study 1a: Stimuli
-
-Varies **Profile info** across types of influencer 
-
-```{r, echo = FALSE, fig.align = "center", out.width="80%"}
-url <- "figs/disclosure_study_1_manip1.png"
-knitr::include_graphics(url)
-```
-
-Varies **likes** across types of influencer 
-
-
-```{r, echo = FALSE, fig.align = "center", out.width="70%"}
-url <- "figs/disclosure_study_1_manip2.png"
-knitr::include_graphics(url)
-```
-
----
-# Study 1a: Results 
-
-```{r, echo = FALSE, fig.align = "center", out.width="55%"}
-url <- "figs/disclosure_study_1_results.png"
-knitr::include_graphics(url)
-```
-
-**Takeaways**: 
-
-* Mediation via persuasion knowledge for macro, mega, nano 
-* No Mediation via trustworthiness of the post 
-
-Persuasion Knowledge?
-
-* Consumers expected post to be sponsored
-
-$\implies$ when consumers think something is sponsored and can't be verified perceptions go down
-
----
-class: font150
-# Study 2 
-
-**2 x 2 design**: 
-
-* Nano vs Mega 
-* Non-disclosure vs disclosure 
-
-```{r, echo = FALSE, fig.align = "center", out.width="50%"}
-url <- "figs/disclosure_study_2_manip.png"
-knitr::include_graphics(url)
-```
-
----
-class: font140
-# Study 2: Results 
-
-```{r, echo = FALSE, fig.align = "center", out.width="50%"}
-url <- "figs/disclosure_study_2_results_fig.png"
-knitr::include_graphics(url)
-```
-
-* If no disclosure, when respondant thinks post is sponsored their trust in post content falls
-  * Leads to lower evals of influencer and brand (not shown)
-* **NOT** the case when sponsorship is disclosed
+**How?**: Natural Experiment on Instagram
 
 ---
 class: font160
-# Takeaways 
+# The Experiment
 
-* Revealing a post is **sponsored** makes **consumers trust the post more**, particularly **when the content is perceived to be sponsored**
+The 'Experiment': Introduction of strict Ad Disclosure Laws
 
-* ... **Prevents decrease in likeability of influencers** and **negative brand evaluations** 
+* **Treatment**: New laws passed in Germany in late 2016
+* **Treated Group**: Germany influencer market
+* **Untreated Group**: Spanish influencer market
+
+Data: 6,000 local influencers in Spain and Germany
+
+---
+# Disclosure Patterns
+
+```{r, echo = FALSE, fig.align = "center", out.width="85%"}
+knitr::include_graphics("figs/ershov_fig_01.png")
+```
+
+---
+# Detecting Disclosure?
+
+```{r, echo = FALSE, fig.align = "center", out.width="85%"}
+knitr::include_graphics("figs/ershov_fig_02.png")
+```
+
+---
+# Disclosure Before & After
+
+
+```{r, echo = FALSE, fig.align = "center", out.width="110%"}
+knitr::include_graphics("figs/ershov_did_01.png")
+```
+
+---
+# Engagement Metrics
+
+
+```{r, echo = FALSE, fig.align = "center", out.width="110%"}
+knitr::include_graphics("figs/ershov_did_02.png")
+```
 
 
 ---
@@ -716,6 +849,8 @@ class: inverse, center, middle
 ---
 class: font160
 # Summary
+
+UPDATE
 
 * Quantifying causal relationship between followers and impression is difficult 
   * But allows us to choose the "right" influencer for a campaign 
@@ -735,11 +870,11 @@ class: font160
 Suggested Citation:
 
 ```{r, engine='out', eval = FALSE}
-@misc{deerdsms2023,
-      title={"Digital and Social Media Strategies: Influencers"},
+@misc{deerdsms2024,
+      title={"Digital and Social Media Strategies: Word of Mouth and Influencers"},
       author={Lachlan Deer},
-      year={2023},
-      url = "https://github.com/deer-marketing-lab/dsms-lecture-influencers"
+      year={2024},
+      url = "https://github.com/deer-marketing-lab/dsms-lecture-wom-influencers"
 }
 ```
 
