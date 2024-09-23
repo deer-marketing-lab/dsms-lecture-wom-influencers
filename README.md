@@ -1,7 +1,7 @@
 # Digital and Social Media Strategies: Word of Mouth and Influencers
 
 [![lifecycle](https://img.shields.io/badge/lifecycle-stable-green.svg)](https://www.tidyverse.org/lifecycle/#maturing)
-[![lifecycle](https://img.shields.io/badge/version-2023-red.svg)]()
+[![lifecycle](https://img.shields.io/badge/version-2024-red.svg)]()
 
 ## Meta-Information
 
