@@ -1,4 +1,4 @@
-# Digital and Social Media Strategies: LECTURE NAME
+# Digital and Social Media Strategies: Word of Mouth and Influencers
 
 [![lifecycle](https://img.shields.io/badge/lifecycle-stable-green.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 [![lifecycle](https://img.shields.io/badge/version-2023-red.svg)]()
@@ -8,11 +8,11 @@
 * Module Maintainer: Lachlan Deer (`@lachlandeer`)
 * Course: [Digital and Social Media Strategies](https://tisem-digital-marketing.github.io/XXX-dsms)
 * Institute: Dept of Marketing, Tilburg University
-* Current Version: [2023 edition](https://tisem-digital-marketing.github.io/XXXX-dsms)
+* Current Version: [2024 edition](https://tisem-digital-marketing.github.io/XXXX-dsms)
 
 ## Introduction
 
-Slides for the lecture on influencers for Digital and Social Media Strategies
+Slides for the lecture on Word of Mouth and Influencers for Digital and Social Media Strategies
 
 Slides are a xaringan presentation and are built to html and pdf using the Snakemake workflow management system.
 I also manage R's package dependencies with `renv`.
@@ -92,17 +92,17 @@ This will install all the packages we need. It may take a while.
 
 ## Suggested Citation (for the Module)
 
-Deer, Lachlan. 2023. Digital and Social Media Strategies: Influencers.
+Deer, Lachlan. 2024. Digital and Social Media Strategies: Word of Mouth and Influencers.
 Tilburg University.
-url = "https://github.com/deer-marketing-lab/dsms-lecture-influencers"
+url = "https://github.com/deer-marketing-lab/dsms-lecture-wom-influencers"
 
 ## Suggested Citation (Template)
 
 ```{r, engine='out', eval = FALSE}
-@misc{deerdsms2023,
-      title={"Digital and Social Media Strategies: Influencers"},
+@misc{deerdsms2024,
+      title={"Digital and Social Media Strategies: Word of Mouth and Influencers"},
       author={Lachlan Deer},
-      year={2023},
-      url = "https://github.com/deer-marketing-lab/dsms-lecture-influencers"
+      year={2024},
+      url = "https://github.com/deer-marketing-lab/dsms-lecture-wom-influencers"
 }
 ```
