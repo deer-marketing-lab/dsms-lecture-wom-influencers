@@ -890,7 +890,7 @@ class: inverse, center, middle
 # Recap 
 
 ---
-class: font160
+class: font140
 # Summary
 
 * Consumer WoM has small positive impacts on consumer demand
